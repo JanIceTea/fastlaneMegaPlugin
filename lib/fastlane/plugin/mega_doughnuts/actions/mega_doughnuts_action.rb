@@ -1,13 +1,14 @@
 require 'fastlane/action'
 require_relative '../helper/mega_doughnuts_helper'
+require 'open_weather'
 
 module Fastlane
   module Actions
     class MegaDoughnutsAction < Action
       def self.run(params)
         UI.message("The mega_doughnuts plugin is working!")
-        result = sh("git log --shortstat --since \"today\" --until \"today\"")
-        puts result
+        options = { units: "metric", APPID: "17cfcdc32adbe2e13c85d7f42967c78e" }
+        puts OpenWeather::Current.city("Amsterdam, NL", options)
       end
 
       def self.description

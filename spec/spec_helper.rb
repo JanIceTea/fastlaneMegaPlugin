@@ -11,5 +11,4 @@ end
 
 require 'fastlane' # to import the Action super class
 require 'fastlane/plugin/mega_doughnuts' # import the actual plugin
-
 Fastlane.load_actions # load other actions (in case your plugin calls other actions or shared values)

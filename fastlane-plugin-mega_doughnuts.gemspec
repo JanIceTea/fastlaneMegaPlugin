@@ -20,9 +20,9 @@ Gem::Specification.new do |spec|
 
   # Don't add a dependency to fastlane or fastlane_re
   # since this would cause a circular dependency
+  spec.add_dependency('open-weather')
 
   # spec.add_dependency 'your-dependency', '~> 1.0.0'
-  spec.add_development_dependency('ruby-lokalise-api')
 
   spec.add_development_dependency('pry')
   spec.add_development_dependency('bundler')
